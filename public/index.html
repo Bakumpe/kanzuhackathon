@@ -6,66 +6,232 @@
     <title>KanzuCode-Hackathon</title>
     <link rel="stylesheet" href="/dist/output.css">
 </head>
-<body class="text-gray-600">
+<body class="text-gray-800 ">
 <!--navbar this should remain fixed when some one scrolls down-->
-    <header class="fixed bg-black">
-        <h1 class="text-8xl ">
-            Kanzu-Code Hackathon
-        </h1>
-        <ul>
-            <li><a href="#">
-                Home
-            </a></li>
-            <li><a href="#">
-                Event
-            </a></li>
-            <li><a href="#">
-                Register
-            </a></li>
-        </ul>
+    <header class=" bg-black text-gray-200 p-4">
+        <div class="flex items-center justify-between">
+            <h1 class="md:text-5xl">
+                Kanzu-Code Hackathon
+            </h1>
+            <div class="px-4 cursor-pointer md:hidden" id="burger">
+                <svg class="w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </div>  
+        </div>    
+        <nav>
+            <ul class=" mt-6 hidden md:flex justify-end space-x-4 text-sm" id="menu">
+                <li class=" font-bold p-4 bg-yellow-500 rounded text-gray-800">
+                    <a href="#">
+                    Home
+                    </a>
+                </li>
+                <li class=" font-bold p-4 bg-yellow-500 rounded text-gray-800">
+                    <a href="#">
+                    Event
+                    </a>
+                </li>
+                <li class=" font-bold p-4 bg-yellow-500 rounded text-gray-800">
+                    <a href="#">
+                    Register
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </header>
 <!--mainboday-->      
-    <main>
+    <main class="flex flex-col items-center justify-center">
+        <!--Event Details-->
+        <div class="font-bold  p-4 text-center w-full md:w-1/2 border-white bg-opacity-90 rounded-lg shadow-lg">
+            <p>Join us at the Kanzucode Hackathon! Innovate, 
+                collaborate, and compete with the brightest minds on
+                December 02, 2024. Don't miss the chance to showcase 
+                your skills and win exciting prizes. See you there!
+            </p>
+        </div>
+
 <!--Event Banner-->
-        <div>
-            <div><!--Frontend-->
-                <img src="imgs/frontend.jpg" alt="frontend">
-                <div>
-                    <span>Front-End Developer</span>
-                    <button>Register</button>
+        <div class="mt-8 grid lg:grid-cols-3 gap-6 p-4">
+            <div class="card hover:shadow-lg">
+                <img src="/public/imgs/frontend.jpg" alt="frontend" class="w-full h-32 sm:h-48 object-cover">
+                <div class="m">
+                    <span class="font-bold my-2">FrontEnd Developers</span>
+                    <span class="block text-gray-800 text-sm p-2 bg-yellow-500 rounded-full w-20 text-center">
+                        Register
+                    </span> 
+                </div>
+                <div class="badge">
+                    <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    <span>2/12/2024</span>
+                </div>
+            </div>
+
+            <div class="card hover:shadow-lg">
+                <img src="/public/imgs/backend.jpg" alt="frontend" class="w-full h-32 sm:h-48 object-cover">
+                <div class="m">
+                    <span class="font-bold ">BackEnd Developers</span>
+                    <span class="block text-gray-800 text-sm p-2 bg-yellow-500 rounded-full w-20 text-center">
+                        Register
+                    </span>  
+                </div>
+                <div class="badge">
+                    <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    <span>2/12/2024</span>
+                </div>
+            </div>
+
+            <div class="card hover:shadow-lg">
+                <img src="/public/imgs/fullstack.jpg" alt="frontend" class="w-full h-32 sm:h-48 object-cover">
+                <div class="m">
+                    <span class="font-bold ">Fullstack Developers</span>
+                    <span class="block text-gray-800 text-sm p-2 bg-yellow-500 rounded-full w-20 text-center">
+                        Register
+                    </span> 
+                </div>
+                <div class="badge">
+                    <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    <span>2/12/2024</span>
                 </div>
             </div>
         </div>
-<!--Event Details-->
-        <div>
-            <p>Join us at the Kanzucode Hackathon! Innovate, 
-                collaborate, and compete with the brightest minds on
-                December 15-17, 2024. Don't miss the chance to showcase 
-                your skills and win exciting prizes. See you there!</p>
-        </div>
+
 <!--Event Agenda-->
-        <div><!--row or column-->
-            <div>
-                <span><!--Registration-->
-                    Confirming Registration
-                </span>
-                <span><!--Time-->
-                    0800hrs
-                </span>
+        <div class="bg-gray-400 justify-center">
+            <div class="text-2xl" >
+                <h2>
+                    Order of the Day
+                </h2>
             </div>
-            
+            <table class="table-fixed bg-gray-200 justify-center"><!--row or column-->
+                <thead>
+                    <tr>
+                        <th class="p-4">Time</th>
+                        <th class="">Activity</th>
+                        <th class="">Presenter</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0800hrs</td>
+                        <td>Arrival and Registration</td>
+                        <td>Verification Team</td>
+                    </tr>
+                    <tr>
+                        <td>0900hrs</td>
+                        <td>Workshop and Group Allocation</td>
+                        <td>Mr. Mutibwa</td>
+                    </tr>
+                    <tr>
+                        <td>1000hrs</td>
+                        <td>Hackathon</td>
+                        <td>Team Leaders</td>
+                    </tr>
+                    <tr>
+                        <td>1400hrs</td>
+                        <td>Group Presentation and Marks Awarding</td>
+                        <td>Facilitators</td>
+                    </tr>
+                    <tr>
+                        <td>1600hrs</td>
+                        <td>Guest of Honor Speach</td>
+                        <td>Guest Of Honor</td>
+                    </tr>
+                    <tr>
+                        <td>1700hrs</td>
+                        <td>Awards</td>
+                        <td>Guest of Honor and Facilitators</td>
+                    </tr>
+                    <tr>
+                        <td>1800hrs</td>
+                        <td>Depature</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 <!--Guest speakers-->
-        <div>
-            <img src="" alt="Guest-Speaker">
+<div class="mt-8 grid lg:grid-cols-3 gap-2 p-4 justify-evenly ">
+    <div class="card  bg-gray-400 m-2 rounded-md">
+        <img src="/public/imgs/guest.jpg" alt="frontend" class="w-full h-32 sm:h-48 object-cover">
+        <div class="">
+            <span class="font-bold my-2 text-gray-100">Minister of ICT</span>
         </div>
-<!--RSVP Section Form with fields for names email and attandance confirmation-->
-        <form>
+        <div class="badge">
+            <span>Thanks for your services</span>
+        </div>
+    </div>
 
+    <div class="card  bg-gray-400 m-2 rounded-md">
+        <img src="/public/imgs/president.jpg" alt="frontend" class="w-full h-32 sm:h-48 object-cover">
+        <div class="">
+            <span class="font-bold my-2 text-gray-100">President Kanzu Hackthon</span>
+        </div>
+        <div class="badge">
+            <span>Thanks for your services</span>
+        </div>
+    </div>
+
+    <div class="card  bg-gray-400 m-2 rounded-md">
+        <img src="/public/imgs/woma.jpg" alt="frontend" class="w-full h-32 sm:h-48 object-cover">
+        <div class="">
+            <span class="font-bold my-2 text-gray-100">Winners Representative</span>
+        </div>
+        <div class="badge">
+            <span>Thanks for your services</span>
+        </div>
+    </div>
+
+
+</div>
+<!--RSVP Section Form with fields for names email and attandance confirmation-->
+        <form name="myform" action="/submit" method="post" 
+        class="bg-black text-gray-200 w-1/2 p-4 justify-center text-center">
+                <h2 class="md:text-3xl rounded-md">
+                    Please Register with Baati Services
+                </h2>
+                <div class="p-2">
+                    <label for="first-name" class="">First Name</label><br>
+                    <input class="rounded-md w-1/2 p-1" placeholder="First Name">
+                </div>
+                <div class="p-2">
+                    <label for="last-name">Last Name</label><br>
+                    <input class="rounded-md w-1/2 p-1" placeholder="Last Name">
+                </div>
+                <div class="p-2">
+                    <label for="middle-name">Middle Name</label><br>
+                    <input class="rounded-md w-1/2 p-1" placeholder="Middle Name">
+                </div>
+                <div class="p-2">
+                    <label for="gender">Gender</label><br>
+                    <select class="text-gray-600 rounded-md w-1/2 p-1">
+                        <option value="select">Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="p-2">
+                    <label for="email">Email</label><br>
+                    <input class="rounded-md w-1/2 p-1" placeholder="Email">
+                </div>
+                <div class="p-4">
+                    <label for="terms">
+                        <input type="checkbox" id="terms" name="terms">
+                        Agree to terms and conditions
+                    </label><br>
+                </div>
+                <div >
+                    <button class="bg-yellow-500 w-1/2 rounded-md p-2">
+                        Submit
+                    </button>
+                </div>
         </Form>
     </main>
-    <footer>
-
-    </footer>
 </body>
 </html>

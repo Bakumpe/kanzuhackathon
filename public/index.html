@@ -6,7 +6,7 @@
     <title>KanzuCode-Hackathon</title>
     <link rel="stylesheet" href="/dist/output.css">
 </head>
-<body class="text-gray-800 ">
+<body class="text-gray-800 bg-gray-300">
 <!--navbar this should remain fixed when some one scrolls down-->
     <header class=" bg-black text-gray-200 p-4">
         <div class="flex items-center justify-between">
@@ -20,18 +20,18 @@
             </div>  
         </div>    
         <nav>
-            <ul class=" mt-6 hidden md:flex justify-end space-x-4 text-sm" id="menu">
-                <li class=" font-bold p-4 bg-yellow-500 rounded text-gray-800">
+            <ul class=" mt-6 hidden md:block justify-end space-x-4 text-sm" id="menu">
+                <li class=" font-bold p-4 bg-yellow-500 rounded-full w-20 text-center text-gray-800">
                     <a href="#">
                     Home
                     </a>
                 </li>
-                <li class=" font-bold p-4 bg-yellow-500 rounded text-gray-800">
+                <li class=" font-bold p-4 bg-yellow-500 rounded-full w-20 text-center text-gray-800">
                     <a href="#">
                     Event
                     </a>
                 </li>
-                <li class=" font-bold p-4 bg-yellow-500 rounded text-gray-800">
+                <li class=" font-bold p-4 bg-yellow-500 rounded-full w-20 text-center text-gray-800">
                     <a href="#">
                     Register
                     </a>
@@ -42,7 +42,7 @@
 <!--mainboday-->      
     <main class="flex flex-col items-center justify-center">
         <!--Event Details-->
-        <div class="font-bold  p-4 text-center w-full md:w-1/2 border-white bg-opacity-90 rounded-lg shadow-lg">
+        <div class="font-bold text-1xl p-4 text-center w-full md:w-1/2 border-white bg-opacity-90 rounded-lg shadow-lg">
             <p>Join us at the Kanzucode Hackathon! Innovate, 
                 collaborate, and compete with the brightest minds on
                 December 02, 2024. Don't miss the chance to showcase 
@@ -52,7 +52,7 @@
 
 <!--Event Banner-->
         <div class="mt-8 grid lg:grid-cols-3 gap-6 p-4">
-            <div class="card hover:shadow-lg">
+            <div class="card hover:shadow-lg border-gray-200 bg-gray-200">
                 <img src="/public/imgs/frontend.jpg" alt="frontend" class="w-full h-32 sm:h-48 object-cover">
                 <div class="m">
                     <span class="font-bold my-2">FrontEnd Developers</span>
@@ -68,7 +68,7 @@
                 </div>
             </div>
 
-            <div class="card hover:shadow-lg">
+            <div class="card hover:shadow-lg border-gray-200 bg-gray-200">
                 <img src="/public/imgs/backend.jpg" alt="frontend" class="w-full h-32 sm:h-48 object-cover">
                 <div class="m">
                     <span class="font-bold ">BackEnd Developers</span>
@@ -84,7 +84,7 @@
                 </div>
             </div>
 
-            <div class="card hover:shadow-lg">
+            <div class="card hover:shadow-lg border-gray-200 bg-gray-200">
                 <img src="/public/imgs/fullstack.jpg" alt="frontend" class="w-full h-32 sm:h-48 object-cover">
                 <div class="m">
                     <span class="font-bold ">Fullstack Developers</span>
@@ -191,25 +191,25 @@
 </div>
 <!--RSVP Section Form with fields for names email and attandance confirmation-->
         <form name="myform" action="/submit" method="post" 
-        class="bg-black text-gray-200 w-1/2 p-4 justify-center text-center">
+        class="bg-black text-gray-200 md:w-1/2 p-4 justify-center text-center">
                 <h2 class="md:text-3xl rounded-md">
                     Please Register with Baati Services
                 </h2>
                 <div class="p-2">
                     <label for="first-name" class="">First Name</label><br>
-                    <input class="rounded-md w-1/2 p-1" placeholder="First Name">
+                    <input class="rounded-md md:w-1/2 p-1" placeholder="First Name">
                 </div>
                 <div class="p-2">
                     <label for="last-name">Last Name</label><br>
-                    <input class="rounded-md w-1/2 p-1" placeholder="Last Name">
+                    <input class="rounded-md md:w-1/2 p-1" placeholder="Last Name">
                 </div>
                 <div class="p-2">
                     <label for="middle-name">Middle Name</label><br>
-                    <input class="rounded-md w-1/2 p-1" placeholder="Middle Name">
+                    <input class="rounded-md md:w-1/2 p-1" placeholder="Middle Name">
                 </div>
                 <div class="p-2">
                     <label for="gender">Gender</label><br>
-                    <select class="text-gray-600 rounded-md w-1/2 p-1">
+                    <select class="text-gray-600 rounded-md md:w-1/2 p-1">
                         <option value="select">Select</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
@@ -218,7 +218,7 @@
                 </div>
                 <div class="p-2">
                     <label for="email">Email</label><br>
-                    <input class="rounded-md w-1/2 p-1" placeholder="Email">
+                    <input class="rounded-md md:w-1/2 p-1" placeholder="Email">
                 </div>
                 <div class="p-4">
                     <label for="terms">
@@ -233,5 +233,27 @@
                 </div>
         </Form>
     </main>
+    <footer class="bg-gray-100 m-2 p-2 flex gap-2 justify-evenly">
+        <div class="md:w-14 w-8 hover:transition-shadow-lg">
+            <img src="/public/png/facebook.png" alt="facebook">
+        </div>
+
+        <div class="md:w-14 w-8 hover:transition-shadow-lg">
+            <img src="/public/png/instagram.png" alt="instagram">
+        </div>
+
+        <div class="md:w-14 w-8 hover:transition-shadow-lg">
+            <img src="/public/png/twitter.png" alt="twitter">
+        </div>
+
+        <div class="md:w-14 w-8 hover:transition-shadow-lg">
+            <img src="/public/png/youtube.png" alt="youtube">
+        </div>
+
+        <div class="md:w-14 w-8 hover:transition-shadow-lg">
+            <img src="/public/png/github.png" alt="github">
+        </div>
+
+    </footer>
 </body>
 </html>

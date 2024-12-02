@@ -8,7 +8,7 @@
 </head>
 <body class="text-gray-800 bg-gray-300">
 <!--navbar this should remain fixed when some one scrolls down-->
-    <header class=" bg-black text-gray-200 p-4">
+    <header class="navbar bg-gray-400 text-gray-200 p-4 flex justify-between fixed top-0 z-[2] w-full m-3">
         <div class="flex items-center justify-between">
             <h1 class="md:text-5xl">
                 Kanzu-Code Hackathon
@@ -20,7 +20,7 @@
             </div>  
         </div>    
         <nav>
-            <ul class=" mt-6 hidden md:block justify-end space-x-4 text-sm" id="menu">
+            <ul class="flex " id="menu">
                 <li class=" font-bold p-4 bg-yellow-500 rounded-full w-20 text-center text-gray-800">
                     <a href="#">
                     Home
@@ -39,15 +39,18 @@
             </ul>
         </nav>
     </header>
+    <br class="">
 <!--mainboday-->      
-    <main class="flex flex-col items-center justify-center">
-        <!--Event Details-->
-        <div class="font-bold text-1xl p-4 text-center w-full md:w-1/2 border-white bg-opacity-90 rounded-lg shadow-lg">
-            <p>Join us at the Kanzucode Hackathon! Innovate, 
-                collaborate, and compete with the brightest minds on
-                December 02, 2024. Don't miss the chance to showcase 
-                your skills and win exciting prizes. See you there!
-            </p>
+    <main class="flex flex-col items-center justify-center mt-20 p-10">
+        <!--Event Details and banner-->
+        <div class="hero min-h-screen mt-20 p-10 font-bold text-2xl text-center w-full border-white bg-opacity-90 rounded-lg shadow-lg">
+                <h2 class="text-4xl"> Welcome to the Hackathon 2024</h2>
+                <p class="text-3xl"> Innovation For Problem Solving </p><br>
+                <p>Join us at the Kanzucode Hackathon! Innovate, 
+                    collaborate, and compete with the brightest minds on
+                    December 02, 2024. Don't miss the chance to showcase 
+                    your skills and win exciting prizes. See you there!
+                </p>
         </div>
 
 <!--Event Banner-->
@@ -196,15 +199,7 @@
                     Please Register with Baati Services
                 </h2>
                 <div class="p-2">
-                    <label for="first-name" class="">First Name</label><br>
-                    <input class="rounded-md md:w-1/2 p-1" placeholder="First Name">
-                </div>
-                <div class="p-2">
-                    <label for="last-name">Last Name</label><br>
-                    <input class="rounded-md md:w-1/2 p-1" placeholder="Last Name">
-                </div>
-                <div class="p-2">
-                    <label for="middle-name">Middle Name</label><br>
+                    <label for="middle-name">Full Name</label><br>
                     <input class="rounded-md md:w-1/2 p-1" placeholder="Middle Name">
                 </div>
                 <div class="p-2">
